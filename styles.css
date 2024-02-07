@@ -39,6 +39,10 @@ button:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
+        overflow-x: hidden; /* Hide horizontal overflow */
+    overflow-y: auto; /* Add vertical scroll if needed */
+    max-height: 100vh; /* Limit container height to viewport height */
+}
     }
     button {
         display: block;
