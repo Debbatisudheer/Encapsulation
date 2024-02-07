@@ -33,7 +33,8 @@ button:hover {
 /* Mobile responsiveness */
 @media only screen and (max-width: 600px) {
     .container {
-        width: 100%;
+        width: 80%;
+        margin: auto;
         padding: 10px;
         display: flex;
         flex-direction: column;
