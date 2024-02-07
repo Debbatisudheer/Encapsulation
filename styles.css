@@ -38,7 +38,10 @@ button:hover {
     }
     button {
         display: block;
-        width: 50%;
-        margin-bottom: 10px 20px;
+        width: 48%;
+        margin-bottom: 10px;
+    }
+     button:last-child {
+        margin-left: 4%; /* Adjusted margin between buttons for mobile screens */
     }
     }
