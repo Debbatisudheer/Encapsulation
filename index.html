@@ -22,5 +22,80 @@
     </div>
 
     <script src="scripts.js"></script>
+
+    <!-- Additional Information -->
+    <div class="container">
+        <h2>Additional Information</h2>
+        <ul>
+            <li>
+                <h3>Bundling Data and Methods:</h3>
+                <ul>
+                    <li>Data (Attributes): The BankAccount class encapsulates data related to a bank account, including account number and balance.</li>
+                    <li>Methods:  The BankAccount class contains methods such as deposit and withdraw to perform transactions on the bank account.Other methods like change_bank_name, is_valid_account_number, __str__, and __repr__ are also included to provide additional functionality related to the bank account.</li>
+                    <li>Encapsulation:  The class bundles both data (attributes) and methods together, encapsulating them within a single unit (the BankAccount class). The encapsulation ensures that the internal state (data) of a bank account is accessed and modified only through designated methods (such as deposit and withdraw), providing control over how the data is manipulated.</li>
+                    <li>Overall, the BankAccount class in the bank example demonstrates the concept of "Bundling Data and Methods" by encapsulating data and methods related to bank account management within a single class. This encapsulation ensures data integrity and provides a clear interface for interacting with bank account objects.  withdraw and deposit are methods in the BankAccount class. These methods handle actions related to the bank account, specifically withdrawing and depositing funds. They are part of the behavior (or methods) associated with the BankAccount class, allowing instances of this class to perform these actions on individual bank accounts.</li>
+                    <li>hiding internal state, which is related to encapsulation, is demonstrated by the use of private attributes in the BankAccount class. Specifically, the balance attribute is declared as a private attribute using double underscores __balance. This means that the balance attribute is hidden from direct access outside the class, and external code cannot directly modify it. Instead, methods like deposit and withdraw are provided to interact with and modify the balance attribute indirectly, encapsulating the internal state of the BankAccount object and ensuring data integrity.</li>
+                    <li>BankAccount Class: The BankAccount class represents the blueprint for creating bank account objects. It encapsulates the attributes and methods related to a bank account.</li>
+                    <li>Instances of BankAccount: Instances of the BankAccount class are created to represent individual bank accounts. For example, account1 and account2 are instances of the BankAccount class created with specific account numbers and initial balances.</li></li>
+                    <li>In summary, the BankAccount class serves as the template or blueprint (class) for creating individual bank account objects (instances).</li>
+                    <li>
+                <h3>Access Modifiers:</h3>
+                <ul>
+                    <li>Protected Attribute: The _account_number attribute is marked as protected by prefixing it with a single underscore _. This convention indicates that the attribute is intended for internal use or subclassing but can still be accessed from outside the class.</li>
+                    <li>Private Attribute: The __balance attribute is marked as private by prefixing it with a double underscore __. This convention invokes name mangling, making it harder to access the attribute from outside the class.</li>
+                    <li>These access modifiers are used to indicate the visibility and intended usage of attributes within the BankAccount class.</li>
+                </ul>
+            </li>
+            <li>
+                <h3>Properties and Methods:</h3>
+                <ul>
+                    <li>Properties (Attributes): bank_name: This is a class attribute that represents the name of the bank._account_number: This is a protected attribute representing the account number of the bank account.__balance: This is a private attribute representing the balance of the bank account.</li>
+                    <li>Methods: __init__(self, account_number, balance): This is the constructor method that initializes a bank account </li>
+                    <li> with an account number and balance.deposit(self, amount): This method allows depositing funds into the bank account.withdraw(self, amount): This method allows withdrawing funds from the bank account. change_bank_name(cls, new_name): This class method allows changing the name of the bank. is_valid_account_number(account_number): This static method checks if an account number is valid.</li>
+                    <li>These properties and methods encapsulate the data and behavior of the BankAccount class, providing a structured way to interact with bank account objects</li>
+                </ul>
+            </li>
+            <li>
+                <h3>Getter and Setter Methods:</h3>
+                <p>Getter and setter methods are typically used to access and modify private or protected attributes of a class in a controlled manner. However, in Python, property decorators provide a more concise way to define getter and setter methods without explicitly calling them.</p>
+                <p>Getter methods are defined using the @property decorator to access private or protected attributes.</p>
+                <p>Getter: @property decorator is used to define getter methods for account_number and balance. These getter methods allow accessing the private or protected attributes _account_number and __balance respectively.</p>
+                <p>Setter methods are not explicitly defined but can be implemented using @property.setter decorator if necessary.</p>
+                <p>Setter methods are not explicitly defined in the example. Instead, the @property.setter decorator can be used to define setter methods if necessary.</p>
+                <p>deposit and withdraw methods serve as indirect setter methods for modifying the __balance attribute.</p>
+            </li>
+            <li>
+                <h3>Property Decorators:</h3>
+                <p>achieves encapsulation and controlled access to attributes without the need for separate getter and setter methods.</p>
+                <p>property decorators are used to define getter methods for accessing private or protected attributes of the BankAccount class. Property decorators provide a convenient way to encapsulate attribute access and add additional functionality.</p>
+                <p>@property decorator is used to define getter methods for account_number and balance attributes, allowing controlled access.</p>
+                <p>Property decorators are used to define getter methods for account_number and balance.These getter methods allow accessing the private or protected attributes _account_number and __balance respectively.</p>
+            </li>
+            <li>
+                <h3>Decorators:</h3>
+                <p>Class Method Decorator (@classmethod) and Static Method Decorator (@staticmethod) are used to define methods related to the class itself rather than specific instances.</p>
+                <p>Class Method Decorator (@classmethod)(changing bank name): The @classmethod decorator is used in the change_bank_name method of the BankAccount class. This decorator is applied to the change_bank_name method to define a class method that can be called on the class itself (BankAccount.change_bank_name()), rather than on an instance of the class. The change_bank_name method is responsible for changing the class-level attribute bank_name.</p>
+                <p>Static Method Decorator (@staticmethod)(checking validity of account number): The @staticmethod decorator is used in the is_valid_account_number method of the BankAccount class. This decorator is applied to the is_valid_account_number method to define a static method that can be called on the class itself (BankAccount.is_valid_account_number()), rather than on an instance of the class. The is_valid_account_number method is responsible for checking the validity of a given account number.</p>
+                <p>Both @classmethod and @staticmethod decorators are used to define methods that are related to the class itself rather than specific instances of the class. These decorators provide a way to encapsulate class-level functionality within the class definition.</p>
+            </li>
+            <li>
+                <h3>Dunder Methods:</h3>
+                <p>Special methods (init, str, repr) are used to customize behavior for object initialization, string representation, and debugging.</p>
+                <p> __init__: This dunder method is a constructor and is called automatically when a new instance of the class is created. It initializes the object's state. __str__: This dunder method is called by the str() function and returns a string representation of the object. It's typically used for a human-readable description of the object. __repr__: This dunder method returns an "official" string representation of the object, which can be used to recreate the object. It's called by the repr() function and is typically used for debugging and logging. Here's an example of how these dunder methods are implemented in the BankAccount class: In this example, the __str__ and __repr__ dunder methods provide customized string representations of BankAccount objects when str() and repr() functions are called on them, respectively. The __init__ dunder method initializes the object's state when it's created.</p>
+            </li>
+            <li>
+                <h3>Immutable Objects:</h3>
+                <p>Attributes like bank_name and _account_number are considered immutable as they are not modified after initialization.</p>
+            </li>
+            <li>
+                <h3>Data Structures:</h3>
+                <p>Although not explicitly used in the example, data structures like dictionaries, sets, and tuples can be utilized to manage and manipulate related data effectively.</p>
+            </li>
+            <li>
+                <h3>Metaprogramming:</h3>
+                <p>Metaprogramming concepts like metaclasses, decorators, and dynamic attribute manipulation are not directly used but can be applied to customize class behavior and encapsulation.</p>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
